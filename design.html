@@ -14,32 +14,51 @@
         <li id="buy"><a href="buy.html"> buy </a></li>
         <li id="about"><a href="about.html"> about </a></li>
       </ul>
-      <home>
-        <h1>Home page</h1>
-        <p>
-          Hi there DIYer!
-          It&apos;s time to build your own closet!
-          We take care of the technical part, you put your handyman skills to the test!
-          1 design, 1 price
-        </p>
-        <p>
-          Step 1:
-          Pick a plank size you want to make your closet from.
-          Design your closet.
-          Press buy.
-        </p>
-        <p>
-          Step 2:
-          Check our example pdf document to see if you&apos;re up for the task.
-          This will be your final result but for your custom design!
-        </p>
-        <p>
-          Step 3:
-          Enter your name and E-mail.
-          Purchase your design.
-          Check your mailboxfor the pdf!
-        </p>
-      </home>
     </nav>
+
+    <page>
+        <h1>Design</h1>
+
+        <h2>Outer dimensions</h2>
+        <input type="number" id="outer length" min="10" max="1000" placeholder="length" step=".01"> cm
+        <input type="number" id="outer width" min="10" max="1000" placeholder="width" step=".01"> cm
+        <input type="number" id="outer height" min="10" max="1000" placeholder="height" step=".01"> cm
+
+        <h2>Inner dimensions</h2>
+        <input type="number" id="inner length" min="10" max="1000" placeholder="length" step=".01"> cm
+        <input type="number" id="inner width" min="10" max="1000" placeholder="width" step=".01"> cm
+        <input type="number" id="inner height" min="10" max="1000" placeholder="height" step=".01"> cm
+
+        <h2>Feet height</h2>
+        <input type="number" id="feet" min="1" max="20" placeholder="height" step=".01"> cm
+
+        <h2>Buttons</h2>
+        <button type="button" id="add plank">Add plank</button>
+        <button type="button" id="reset">Reset</button>
+        <button type="button" id="buy">Buy</button>
+        Door
+        <select name="door state" id="door state">
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+            <option value="gone">Gone</option>
+        </select>
+        </div>
+
+    </page>
+    <p>
+        <div class="language-picker js-language-picker">
+            <form action="" class="language-picker__form">
+            <label for="language-picker-select">Select your language</label>
+            <select name="language-picker-select" id="language-picker-select">
+                <option lang="nl" value="dutch">Dutch</option>
+                <option lang="de" value="deutsch">Deutsch</option>
+                <option lang="en" value="english" selected>English</option>
+                <option lang="fr" value="francais">Français</option>
+                <option lang="it" value="italiano">Italiano</option>
+                <!-- other language options -->
+            </select>
+            </form>
+        </div>
+    </p>    
   </body>
 </html>
