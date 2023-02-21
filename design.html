@@ -6,7 +6,7 @@
   </head>
   <body>
     <logo id="logo"><img src="ico/wood-cutter-svgrepo-com.svg" alt="lumberjack logo" width="10%"> </logo>
-    <nav>
+    <nav class="navbar">
       <ul>
         <li id="index"><a href="index.html"> home </a></li>
         <li id="design" ><a href="design.html"> design </a></li>
@@ -16,26 +16,26 @@
       </ul>
     </nav>
 
-    <page>
+    <section class="design">
         <h1>Design</h1>
 
         <h2>Outer dimensions</h2>
-        <input type="number" id="outer length" min="10" max="1000" placeholder="length" step=".01"> cm
-        <input type="number" id="outer width" min="10" max="1000" placeholder="width" step=".01"> cm
-        <input type="number" id="outer height" min="10" max="1000" placeholder="height" step=".01"> cm
+        <input type="number" class="input field" id="outer length" min="10" max="1000" placeholder="length" step=".01"> cm
+        <input type="number" class="input field" id="outer width" min="10" max="1000" placeholder="width" step=".01"> cm
+        <input type="number" class="input field" id="outer height" min="10" max="1000" placeholder="height" step=".01"> cm
 
         <h2>Inner dimensions</h2>
-        <input type="number" id="inner length" min="10" max="1000" placeholder="length" step=".01"> cm
-        <input type="number" id="inner width" min="10" max="1000" placeholder="width" step=".01"> cm
-        <input type="number" id="inner height" min="10" max="1000" placeholder="height" step=".01"> cm
+        <input type="number" class="input field" id="inner length" min="10" max="1000" placeholder="length" step=".01"> cm
+        <input type="number" class="input field" id="inner width" min="10" max="1000" placeholder="width" step=".01"> cm
+        <input type="number" class="input field" id="inner height" min="10" max="1000" placeholder="height" step=".01"> cm
 
         <h2>Feet height</h2>
         <input type="number" id="feet" min="1" max="20" placeholder="height" step=".01"> cm
 
         <h2>Buttons</h2>
-        <button type="button" id="add plank">Add plank</button>
-        <button type="button" id="reset">Reset</button>
-        <button type="button" id="buy">Buy</button>
+        <button type="button" class="button" id="add plank">Add plank</button>
+        <button type="button" class="button" id="reset">Reset</button>
+        <button type="button" class="button" id="buy">Buy</button>
         Door
         <select name="door state" id="door state">
             <option value="open">Open</option>
@@ -44,7 +44,7 @@
         </select>
         </div>
 
-    </page>
+      </section>
     <p>
         <div class="language-picker js-language-picker">
             <form action="" class="language-picker__form">
