@@ -1,6 +1,43 @@
 @font-face{font-family:'Roboto';src:url('doc/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf')}
-
+/* Background and font */
 html * {
     background-color: #C7D8C6;
     font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
   }
+
+/* flexgrid 4 rows and 3 columns */
+
+#main_grid {
+  display: grid;
+  grid-template-columns: [nav_start] 1fr [footer_start];
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "nav1 main footer"
+    "nav2 main footer"
+    "nav3 main footer"
+    "nav4 main footer";
+}
+
+#index {
+  grid-area: nav1;
+}
+
+#design {
+  grid-area: nav2;
+}
+
+#build {
+  grid-area: nav3;
+}
+
+#buy {
+  grid-area: nav4;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
