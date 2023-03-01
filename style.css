@@ -5,46 +5,76 @@ html * {
     font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
   }
 
+img {
+  width: 100%;
+  height: auto;
+  background-color: inherit;
+}
+
 #main_grid {
   display: grid;
-  margin: 0;
+  margin: 0em;
+  padding: 0em;
   grid-template-columns: 15vw 1fr 10vw;
   grid-template-areas: 
     "nav main footer";
 }
 
-.navbar {
+.nav-container {
   grid-area: nav;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100vh;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
   margin-left: 1em;
   background-color: #c7d8c6;
 }
 
-.navbar a {
-  float: left;
-  padding: 1em;
+.nav-container div {
+  display: flex;
+  cursor: pointer;
+  flex-direction: inherit;
   margin-top: 1em;
   margin-bottom: 1em;
   text-align: center;
-  border-style: solid;
   background-color: #c7d8c6;
+  transition: 0.5s;
+}
+
+.nav-container div:hover {
+  padding-right: .2em;
+  padding-left:.2em;
+}
+
+.nav-container div a {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  font-size: 1em;
 }
 
 .main {
   grid-area: main;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: inherit;
 }
 
 .footer {
   grid-area: footer;
   width: 100%;
-  background-color: #c7d8c6;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: inherit;
 }
 
 #logo {
-  flex-grow: 10;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: inherit;
 }
