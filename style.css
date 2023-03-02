@@ -8,7 +8,7 @@ html, body {
     box-sizing: border-box;  
     background-color: #a9b7c0;
     font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-    border: 0px solid red;
+    border: 1px solid red;
   } 
 
 img {
@@ -37,15 +37,12 @@ body {
   padding-right: .5em;
   margin-left: 1em;
   background-color: #c7d8c6;
-  height: 100%;
 }
 
 .nav-container div {
   display: flex;
   cursor: pointer;
   flex-direction: inherit;
-  margin-top: 1em;
-  margin-bottom: 1em;
   text-align: center;
   background-color: #c7d8c6;
   transition: 0.5s;
@@ -80,12 +77,11 @@ body {
   display: flex;
   cursor: pointer;
   flex-direction: column;
-  justify-content: space-evenly;
   background-color: inherit;
   text-align: center;
 }
 
-.footer div a {
+.footer div a, .footer .language, .footer #language-picker-select {
   text-decoration: none;
   color: inherit;
   background-color: inherit;
