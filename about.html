@@ -5,36 +5,49 @@
     <title>DIWood - Do it with wood</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <logo id="logo"><img src="ico/wood-cutter-svgrepo-com.svg" alt="lumberjack logo" width="10%"> </logo>
-    <nav class="navbar">
-      <ul>
-        <li id="index"><a href="index.html"> home </a></li>
-        <li id="design" ><a href="design.html"> design </a></li>
-        <li id="build" ><a href="build.html"> build </a></li>
-        <li id="buy"><a href="buy.html"> buy </a></li>
-        <li id="about"><a href="about.html"> about </a></li>
-      </ul>
+  <body id="main_grid">
+    <nav class="nav-container">
+      <div class="nav-sub-container" id="index">
+        <a href="index.html"><img src="ico/home-real-estate-svgrepo-com.svg" alt="home image"></a>
+        <a href="index.html"> home </a>
+      </div>
+      <div class="nav-sub-container" id="design">
+        <a href="design.html"><img src="ico/closet-furniture-and-household-svgrepo-com.svg" alt="closet image"></a>
+        <a href="design.html"> design </a>
+      </div>
+      <div class="nav-sub-container" id="build">
+        <a href="build.html"><img src="ico/design-tool-pencil-svgrepo-com.svg" alt="build image"></a>
+        <a href="build.html"> build </a>
+      </div>
+      <div class="nav-sub-container" id="buy">
+        <a href="buy.html"><img src="ico/cart-svgrepo-com.svg" alt="cart image"></a>
+        <a href="buy.html"> buy </a>
+      </div>
     </nav>
 
     <section class="about">
         <h1>About</h1>
-
     </section>
 
-    <div class="language-picker js-language-picker">
-      <form action="" class="language-picker__form">
-        <label for="language-picker-select">Select your language</label>
-    
-        <select name="language-picker-select" id="language-picker-select">
-          <option lang="nl" value="dutch">Dutch</option>
-          <option lang="de" value="deutsch">Deutsch</option>
-          <option lang="en" value="english" selected>English</option>
-          <option lang="fr" value="francais">Français</option>
-          <option lang="it" value="italiano">Italiano</option>
-          <!-- other language options -->
-        </select>
-      </form>
+    <div class="footer">
+      <div class="footer-sub-container" id="contact">
+        <a href="about.html"><img src="ico/wood-cutter-svgrepo-com.svg" alt="lumberjack logo"></a>
+        <a href="about.html"> contact </a>
+      </div>
+      <div class="language">
+        <form action="" class="language-picker__form">
+          <label for="language-picker-select">Select your language</label>
+      
+          <select name="language-picker-select" id="language-picker-select">
+            <option lang="nl" value="dutch">Dutch</option>
+            <option lang="de" value="deutsch">Deutsch</option>
+            <option lang="en" value="english" selected>English</option>
+            <option lang="fr" value="francais">Français</option>
+            <option lang="it" value="italiano">Italiano</option>
+            <!-- other language options -->
+          </select>
+        </form>
+      </div>
     </div>
   </body>
 </html>

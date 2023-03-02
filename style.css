@@ -1,9 +1,15 @@
 @font-face{font-family:'Roboto';src:url('doc/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf')}
 /* Background and font */
-html * {
+html, body {
+    margin: 0;
+    padding: 0;
+} 
+* {
+    box-sizing: border-box;  
     background-color: #a9b7c0;
     font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-  }
+    border: 0px solid red;
+  } 
 
 img {
   width: 100%;
@@ -11,11 +17,12 @@ img {
   background-color: inherit;
 }
 
-#main_grid {
+body {
   display: grid;
-  margin: 0em;
-  padding: 0em;
-  grid-template-columns: 15vw 1fr 10vw;
+  width: calc(100vw -3px);
+  height: calc(100vh - 3px);
+  box-sizing: border-box;
+  grid-template-columns: 15% 75% 10%;
   grid-template-areas: 
     "nav main footer";
 }
@@ -23,13 +30,14 @@ img {
 .nav-container {
   grid-area: nav;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100vh;
   padding-left: .5em;
   padding-right: .5em;
   margin-left: 1em;
   background-color: #c7d8c6;
+  height: 100%;
 }
 
 .nav-container div {
@@ -44,8 +52,8 @@ img {
 }
 
 .nav-container div:hover {
-  padding-right: .2em;
-  padding-left:.2em;
+  margin-right: .2em;
+  margin-left:.2em;
 }
 
 .nav-container div a {
@@ -57,24 +65,29 @@ img {
 
 .main {
   grid-area: main;
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 1em;
   background-color: inherit;
 }
 
 .footer {
   grid-area: footer;
-  width: 100%;
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
   background-color: inherit;
 }
 
-#logo {
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+.footer div {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-evenly;
   background-color: inherit;
+  text-align: center;
+}
+
+.footer div a {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  font-size: 1em;
 }
