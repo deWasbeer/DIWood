@@ -22,7 +22,7 @@ body {
   width: calc(100vw -3px);
   height: calc(100vh - 3px);
   box-sizing: border-box;
-  grid-template-columns: 15% 75% 10%;
+  grid-template-columns: 15% 75% 10%; /* TODO exchange grid for nav */
   grid-template-areas: 
     "nav main footer";
 }
