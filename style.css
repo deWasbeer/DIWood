@@ -13,8 +13,7 @@ body {
   border: 1px solid red;}
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
   background-color: inherit;;
 }
 
@@ -23,7 +22,7 @@ nav {
   flex-direction: column;
   align-items: center;
   width: 10%;
-  height: 100vh;
+  height: 100%;
   padding-left: .5em;
   padding-right: .5em;
   margin-left: 1em;
@@ -36,8 +35,7 @@ nav .nav-item {
   text-align: center;
   justify-content: space-between;
   flex-shrink: 1;
-  margin-bottom: 20px;
-  height: 100%;
+  height: 25%;
   background-color: inherit;
 }
 
