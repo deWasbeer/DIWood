@@ -1,89 +1,65 @@
-@font-face{font-family:'Roboto';src:url('doc/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf')}
-/* Background and font */
-html, body {
-    margin: 0;
-    padding: 0;
-} 
-* {
-    box-sizing: border-box;  
-    background-color: #a9b7c0;
-    font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-    border: 1px solid red;
-  } 
-
-img {
-  width: 100%;
-  height: auto;
-  background-color: inherit;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: grid;
-  width: calc(100vw -3px);
-  height: calc(100vh - 3px);
-  box-sizing: border-box;
-  grid-template-columns: 15% 75% 10%; /* TODO exchange grid for nav */
-  grid-template-areas: 
-    "nav main footer";
+  display: flex;
 }
 
-.nav-container {
-  grid-area: nav;
+nav {
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: .5em;
-  padding-right: .5em;
-  margin-left: 1em;
-  background-color: #c7d8c6;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
 }
 
-.nav-container div {
+nav .flex-item {
   display: flex;
-  cursor: pointer;
-  flex-direction: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background-color: #c7d8c6;
-  transition: 0.5s;
+  margin-bottom: 20px;
+  height: 100%;
 }
 
-.nav-container div:hover {
-  margin-right: .2em;
-  margin-left:.2em;
+nav img {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
-.nav-container div a {
-  text-decoration: none;
-  color: inherit;
-  background-color: inherit;
-  font-size: 1em;
+main {
+  flex: 1;
+  padding: 20px;
 }
 
-.main {
-  grid-area: main;
-  margin: 1em;
-  background-color: inherit;
-}
-
-.footer {
-  grid-area: footer;
+footer {
   display: flex;
   flex-direction: column;
-  background-color: inherit;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  height: 50px;
 }
 
-.footer div {
-  display: flex;
-  cursor: pointer;
-  flex-direction: column;
-  background-color: inherit;
-  text-align: center;
+.footer-left {
+  margin-left: 20px;
 }
 
-.footer div a, .footer .language, .footer #language-picker-select {
-  text-decoration: none;
-  color: inherit;
-  background-color: inherit;
-  font-size: 1em;
+.footer-right {
+  margin-right: 20px;
+}
+
+select {
+  color: #333;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 5px;
 }
