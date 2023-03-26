@@ -13,7 +13,7 @@ body {
   border: 1px solid red;}
 
 img {
-  max-width: 100%;
+  width: 100%;
   background-color: inherit;;
 }
 
@@ -33,15 +33,18 @@ nav .nav-item {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-shrink: 1;
   height: 25%;
+  width: 100%;
   background-color: inherit;
+  border: 1px solid blue;
 }
 
-nav .nav-item p, nav .nav-item a {
+nav .nav-item p, nav .nav-item a , nav .nav-item img {
   cursor: pointer;
   background-color: inherit;
+  height: 100%;
 }
 
 main {
@@ -49,7 +52,7 @@ main {
   padding: 20px;
 }
 
-footer, footer div {
+footer, footer div{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
