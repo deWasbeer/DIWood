@@ -1,20 +1,33 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  width: calc(100vw - 3px);
-  height: calc(100vh - 3px);
-} 
+  width: 100vw;
+  height: 100vh;
+}
+
 * {
   box-sizing: border-box;
   background-color: #a9b7c0;
   color: #333;
   font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-  border: 1px solid red;}
+  border: 1px solid red;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
 
 img {
-  width: 100%;
-  background-color: inherit;;
+  max-width: 100%;
+  background-color: inherit;
+  ;
 }
 
 nav {
@@ -23,8 +36,8 @@ nav {
   align-items: center;
   width: 10%;
   height: 100%;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   margin-left: 1em;
   background-color: #c7d8c6;
 }
@@ -33,18 +46,16 @@ nav .nav-item {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-shrink: 1;
   height: 25%;
-  width: 100%;
   background-color: inherit;
-  border: 1px solid blue;
 }
 
-nav .nav-item p, nav .nav-item a , nav .nav-item img {
+nav .nav-item p,
+nav .nav-item a {
   cursor: pointer;
   background-color: inherit;
-  height: 100%;
 }
 
 main {
@@ -52,7 +63,8 @@ main {
   padding: 20px;
 }
 
-footer, footer div{
+footer,
+footer div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,13 +72,11 @@ footer, footer div{
   background-color: inherit;
 }
 
-.footer-top {
-  display:flex;
-}
-
-.footer-bottom {
-  display:flex;
-}
+aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
 
 select {
   color: #333;
