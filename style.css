@@ -1,89 +1,98 @@
-@font-face{font-family:'Roboto';src:url('doc/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf')}
-/* Background and font */
-html, body {
-    margin: 0;
-    padding: 0;
-} 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+}
+
 * {
-    box-sizing: border-box;  
-    background-color: #a9b7c0;
-    font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-    border: 1px solid red;
-  } 
+  box-sizing: border-box;
+  background-color: #a9b7c0;
+  color: #333;
+  font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+  border: 0px solid red;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
 
 img {
-  width: 100%;
-  height: auto;
   background-color: inherit;
+  width: 90%;
 }
 
-body {
-  display: grid;
-  width: calc(100vw -3px);
-  height: calc(100vh - 3px);
-  box-sizing: border-box;
-  grid-template-columns: 15% 75% 10%;
-  grid-template-areas: 
-    "nav main footer";
+nav .nav-item :hover {
+  transform: translateX(-0.25em);
+  transition: 0.3s;
 }
 
-.nav-container {
-  grid-area: nav;
+nav {
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: .5em;
-  padding-right: .5em;
+  align-items: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   margin-left: 1em;
+  width: 20%;
   background-color: #c7d8c6;
 }
 
-.nav-container div {
-  display: flex;
-  cursor: pointer;
-  flex-direction: inherit;
-  text-align: center;
-  background-color: #c7d8c6;
-  transition: 0.5s;
-}
-
-.nav-container div:hover {
-  margin-right: .2em;
-  margin-left:.2em;
-}
-
-.nav-container div a {
-  text-decoration: none;
-  color: inherit;
-  background-color: inherit;
-  font-size: 1em;
-}
-
-.main {
-  grid-area: main;
-  margin: 1em;
-  background-color: inherit;
-}
-
-.footer {
-  grid-area: footer;
+nav .nav-item {
   display: flex;
   flex-direction: column;
-  background-color: inherit;
-}
-
-.footer div {
-  display: flex;
-  cursor: pointer;
-  flex-direction: column;
-  background-color: inherit;
   text-align: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  background-color: inherit;
 }
 
-.footer div a, .footer .language, .footer #language-picker-select {
-  text-decoration: none;
-  color: inherit;
+nav .nav-item p,
+nav .nav-item a {
+  cursor: pointer;
   background-color: inherit;
-  font-size: 1em;
+  margin: 0em;
+}
+
+nav .nav-item p {
+  font-size: 2vw;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+aside div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+aside a, aside option {
+  font-size: 1vw;
+}
+
+aside select {
+  font-size: 0.75vw;
 }
