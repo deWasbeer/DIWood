@@ -12,7 +12,7 @@ body {
   background-color: #a9b7c0;
   color: #333;
   font-family: Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-  border: 0px solid red;
+  border: 1px solid red;
 }
 
 main {
@@ -26,28 +26,34 @@ main {
 
 section {
   display: flex;
+  flex: 10;
   flex-direction: column;
   padding: 2rem;
 }
 
 img {
   background-color: inherit;
-  width: 90%;
+  width: 80%;
 }
 
-nav .nav-item :hover {
+nav :hover {
   transform: translateX(-0.25em);
   transition: 0.3s;
 }
 
+nav * :hover {
+  transform: translateX(0);
+}
+
 nav {
   display: flex;
+  flex: 1;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin-left: 1em;
-  width: 20%;
   background-color: #c7d8c6;
 }
 
@@ -56,9 +62,8 @@ nav .nav-item {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  height: 20%;
-  width: 100%;
   background-color: inherit;
+  width: 100%;
 }
 
 nav .nav-item p,
@@ -74,6 +79,7 @@ nav .nav-item p {
 
 aside{
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
