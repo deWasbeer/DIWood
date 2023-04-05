@@ -33,7 +33,75 @@
       </nav>
       <section>
         <h2>Ontwerp je eigen kast</h2>
-        <p>Begin door hier onder de buiten dimensies van je gewenste kast in te vullen. Vul daar onder de dimensies in van de planken die je wilt gebruiken voor het bouwen van je kast. Klik hierna op 'bouw' om het 3D model van je kast te zien. Hierna kan je planken toevoegen en deze verplaatsen naar jou gewenste hoogte. Als je tevreden bent met je ontwerp klik dan op 'koop'. Je ontwerp wordt naar het winkelmandje verplaatst, zodra je hebt betaald kan je je op maat gemaakte pdf downloaden. Een voorbeeld van de handleiding vind je onder het kopje 'build'.</p>
+        <div class="dimensions">
+          <div class="bound-box">
+            <div class="dimensions-input">
+              <div class="blok">Buiten dimensies</div>
+              <div class="width">
+                <label class="dimension-name" for="outer-width">Breedte</label>
+                <input class="dimension-number" type="number" id="outer-width" name="outer-width" min="0" max="1000" value="0">
+                <div class="unit">mm</div>
+              </div>
+              <div class="height">
+                <label class="dimension-name" for="outer-height">Hoogte</label>
+                <input class="dimension-number" type="number" id="outer-height" name="outer-height" min="0" max="1000" value="0">
+                <div class="unit">mm</div>
+              </div>
+              <div class="depth">
+                <label class="dimension-name" for="outer-depth">Diepte</label>
+                <input class="dimension-number" type="number" id="outer-depth" name="outer-depth" min="0" max="1000" value="0">
+                <div class="unit">mm</div>
+              </div>
+            </div>
+            <div class="dimensions-input">
+              <div class="blok">Plank dimensies</div>
+              <div class="width">
+                <label class="dimension-name" for="plank-width">Breedte</label>
+                <input class="dimension-number" type="number" id="plank-width" name="plank-width" min="0" max="1000" value="0">
+                <div class="unit">mm</div>
+              </div>
+              <div class="height">
+                <label class="dimension-name" for="plank-height">Dikte</label>
+                <input class="dimension-number" type="number" id="plank-height" name="plank-height" min="0" max="1000" value="0">
+                <div class="unit">mm</div>
+              </div>
+              <div class="depth">
+                <label class="dimension-name" for="plank-depth">Lengte</label>
+                <input class="dimension-number" type="number" id="plank-depth" name="plank-depth" min="0" max="1000" value="0">
+                <div class="unit">mm</div>
+              </div>
+            </div>
+            <div class="config-row">
+              <button type="button" onclick="build()">Bouw</button>
+              <button type="button" onclick="add()">Voeg verdieping toe</button>
+              <button type="button" onclick="remove()">Verwijder verdieping</button>
+              <button type="button" onclick="move()">Deur stand</button>
+              <button type="button" onclick="buy()">Koop</button>
+              <!-- dropdown menu-->
+              <select id="plank-select">
+                <option value="1">Plank 1</option>
+                <option value="2">Plank 2</option>
+                <option value="3">Plank 3</option>
+                <option value="4">Plank 4</option>
+                <option value="5">Plank 5</option>
+                <option value="6">Plank 6</option>
+                <option value="7">Plank 7</option>
+                <option value="8">Plank 8</option>
+                <option value="9">Plank 9</option>
+                <option value="10">Plank 10</option>
+              </select>
+              <!-- slider that selects the height of the selected plank -->
+              <input type="range" min="0" max="100" value="0" class="slider" id="plank-height-slider" for="plank-height-value">
+              <!-- dispay of plank-height-value -->
+              <div class="dimension-number" id="plank-height-value">Value</div>
+              <div class="unit">mm</div>
+            </div>
+          </div>
+        </div>
+        <div class="3d-model">
+          <!-- image placeholder for 3D model -->
+          <img src="img/placeholder.png" alt="3D model">
+        </div>
       </section>
       <aside>
         <div>
