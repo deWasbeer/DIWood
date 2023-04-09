@@ -280,6 +280,24 @@ select, option, button, .dimension-number, .unit {
   object-fit: scale-down;
 }
 
+section .blokken {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  width: 100%;
+}
+
+section .blok {
+  flex-grow: 1;
+  margin-bottom: 0px;
+}
+
+section .full {
+  height: 100%;
+}
+
 /* Media Queries */
 
 @media (orientation: portrait) {
