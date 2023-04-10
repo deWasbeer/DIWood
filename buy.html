@@ -12,23 +12,23 @@
       <nav>
         <div class="nav-item">
           <a href="index.html"><img src="ico/icons-toolbar/toolbox-construction-svgrepo-com.svg" alt="Home"></a>
-          <p>Home</p>
+          <a href="index.html"> Home</a>
         </div>
         <div class="nav-item">
           <a href="design.html"><img src="ico/icons-toolbar/window-window-svgrepo-com.svg" alt="Design"></a>
-          <p>Design</p>
+          <a href="design.html">Design</a>
         </div>
         <div class="nav-item">
           <a href="build.html"><img src="ico/icons-toolbar/drawing-drawing-svgrepo-com.svg" alt="Build"></a>
-          <p>Build</p>
+          <a href="build.html">Build</a>
         </div>
         <div class="nav-item">
           <a href="buy.html"><img src="ico/icons-toolbar/wood-nature-svgrepo-com.svg" alt="Buy"></a>
-          <p>Buy</p>
+          <a href="buy.html">Buy</a>
         </div>
         <div class="nav-item">
           <a href="about.html"><img src="ico/icons-toolbar/engineer-people-svgrepo-com.svg" alt="About"></a>
-          <p>About</p>
+          <a href="about.html">About</a>
         </div>
       </nav>
       <section>
@@ -44,17 +44,35 @@
         </div>
         <div class="dimensions full">
           <div class="bound-box full"> 
-            <div class="purchase-input">
-              <div class="blok">
+            <div class="purchase-input aankoop">
+              <div class="blok aankoop">
                 Persoonlijke informatie:
+                <hr>
                 <form action="/action_page.php">
-                  <label for="fname">Voornaam:</label>
-                  <input type="text" id="fname" name="fname"><br><br>
-                  <label for="lname">Achternaam:</label>
-                  <input type="text" id="lname" name="lname"><br><br>
-                  <label for="email">Email:</label>
-                  <input type="text" id="email" name="email"><br><br>
-                  <input type="submit" value="Submit">
+                  <div class="aankoop-box">
+                    <label for="fname" class="aankoop-naam">Voornaam:</label>
+                    <input type="text" class="aankoop-veld" id="fname" name="fname">
+                  </div>
+                  <div class="aankoop-box">
+                    <label for="lname" class="aankoop-naam">Achternaam:</label>
+                    <input type="text" class="aankoop-veld" id="lname" name="lname">
+                  </div>
+                  <div class="aankoop-box">
+                    <label for="email" class="aankoop-naam">Email:</label>
+                    <input type="text" class="aankoop-veld" id="email" name="email">
+                  </div>
+                  <div class="aankoop-box betaling-knop">
+                    <img class="buy" src="ico/icons-payment/ideal-svgrepo-com.svg" alt="ideal">
+                  </div>
+                  <div class="aankoop-box betaling-knop">
+                    <img class="buy" src="ico/icons-payment/paypal-svgrepo-com.svg" alt="paypal">
+                  </div>
+                  <div class="aankoop-box betaling-knop">
+                    <img class="buy" src="ico/icons-payment/apple-pay-svgrepo-com.svg" alt="apple">
+                  </div>
+                  <div class="aankoop-box">
+                    <input class="knop" type="submit" value="Kopen">
+                  </div>
                 </form> 
               </div>
             </div>
