@@ -6,6 +6,11 @@ var plankBreedte;
 var plankDikte;
 var plankLengte;
 
+//list to keep track of all planks with for each plank the name and value of the height of the plank
+var planks = [];
+// add first plank to list of planks with height value of 50
+planks.push({   name: "Plank 1",  value: 50 });
+
 //function that reads and stores dimension-input values in design.html when button with id "bouwen" is clicked
 function readDimensions() {
     kastBreedte = document.getElementById("outer-width").value;
@@ -72,6 +77,8 @@ function reset() {
     document.getElementById("buy").disabled = true;
     // reset slider value to original value
     document.getElementById("plank-height-slider").value = 50;
+    // clear list of planks
+    planks = [];
 }
 
 //function to add a plank option to design.html when button with id "addplank" is clicked
@@ -80,6 +87,9 @@ function addPlank() {
     var option = document.createElement("option");
     option.text = "Plank " + (select.length + 1);
     select.add(option);
+    // add new plank to list of planks with height value of 50
+    planks.push({   name: option.text,  value: 50 });
+    console.log(planks);
 }
 
 //function to remove the last plank option from design.html when button with id "removeplank" is clicked if more than 1 plank option is available
@@ -87,6 +97,9 @@ function removePlank() {
     var select = document.getElementById("plank-select");
     if (select.length > 1) {
         select.remove(select.length - 1);
+        // remove last plank from list of planks
+        planks.pop();
+        console.log(planks);
     }
     //browser popup that states that at least 1 plank is required if only 1 plank option is available and button with id "removeplank" is clicked  
     else {
@@ -102,7 +115,12 @@ slider.oninput = function() {
     output.value = this.value;
     console.log(output.value);
     updatePlankHeight();
-
+    // update value of currently selected plank in list of planks
+    var select = document.getElementById("plank-select");  
+    var option = select.options[select.selectedIndex];
+    planks[select.selectedIndex].value = Number(option.value);
+    //convert string to number
+    console.log(planks);
 }
 
 //link output of slider to currently selecten option of dropdown menu with id "plank-select"

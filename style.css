@@ -360,6 +360,10 @@ form {
   width: min(20ch, 100%);
 }
 
+output {
+  background-color: #c7d8c6;
+}
+
 /*#bouwen, #addplank, #removeplank, #plank-select, #plank-height-slider, #plank-height-value, #opentoggle, #reset, #buy, #mm {
   color: black;
 }
