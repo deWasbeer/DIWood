@@ -101,4 +101,23 @@ output.value = slider.value;
 slider.oninput = function() {
     output.value = this.value;
     console.log(output.value);
+    updatePlankHeight();
+
+}
+
+//link output of slider to currently selecten option of dropdown menu with id "plank-select"
+function updatePlankHeight() {
+    var select = document.getElementById("plank-select");
+    var option = select.options[select.selectedIndex];
+    option.value = output.value;
+}
+
+//update value on slider and "plank-height-value" field when selection in dropdown menu with id "plank-select" is changed
+function updatePlankHeightSelect() {
+    var select = document.getElementById("plank-select");
+    var option = select.options[select.selectedIndex];
+    output.value = option.value;
+    slider.value = option.value;
+    console.log(output.value);
+    //todo: update plank height
 }

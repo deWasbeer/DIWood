@@ -81,7 +81,7 @@
               <button type="button" id="removeplank" disabled onclick="removePlank()">Verwijder verdieping</button>
               <div class="slider-selector">
                 <!-- dropdown menu-->
-                <select disabled id="plank-select">
+                <select disabled id="plank-select" onfocus="updatePlankHeightSelect()">
                   <option value="1">Plank 1</option>
                 </select>
                 <!-- slider that selects the height of the selected plank -->
