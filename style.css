@@ -15,6 +15,8 @@ body {
   border: 0px solid red;
 }
 
+/* Website Design */
+
 main {
   display: flex;
   flex-direction: row;
@@ -26,29 +28,36 @@ main {
 
 section {
   display: flex;
+  flex: 10;
   flex-direction: column;
   padding: 2rem;
 }
 
 img {
   background-color: inherit;
-  width: 90%;
+  width: 70%;
 }
 
-nav .nav-item :hover {
+nav :hover {
   transform: translateX(-0.25em);
   transition: 0.3s;
 }
 
+nav * :hover {
+  transform: translateX(0);
+}
+
 nav {
   display: flex;
+  flex: 1;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin-left: 1em;
-  width: 20%;
   background-color: #c7d8c6;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 nav .nav-item {
@@ -56,9 +65,8 @@ nav .nav-item {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  height: 20%;
-  width: 100%;
   background-color: inherit;
+  width: 100%;
 }
 
 nav .nav-item p,
@@ -69,14 +77,21 @@ nav .nav-item a {
 }
 
 nav .nav-item p {
-  font-size: 2vw;
+  font-size: max(2vw, 2vh);
+  width: min-content;
+  align-self: center;
 }
 
 aside{
   display: flex;
+  flex: 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: min-content;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   }
 
 aside div {
@@ -84,15 +99,334 @@ aside div {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  width: 100%;
+  width: max-content;
   height: 100%;
-  background-color: inherit;
+  background-color: #c7d8c6;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 aside a, aside option {
-  font-size: 1vw;
+  font-size: max(1vw, 1vh);
+  background-color: #c7d8c6
 }
 
 aside select {
-  font-size: 0.75vw;
+  font-size: max(.85vw, .85vh);
+  color: black;
+  text-decoration: none;
+  display: block;
+  background-color: #c7d8c6
+}
+
+/* section content */
+
+section h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: max(3vw, 3vh);
+  margin: 0;
+  text-align: center;
+}
+
+section p {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  background-color: inherit;
+}
+
+section .titel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: inherit;
+}
+
+section .titel2 {
+  display: flex;
+  flex-direction: row;
+  text-align:center;
+  width: 80%;
+  padding: .5rem;
+  margin: 1rem;
+  background-color: #c7d8c6;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+section .titel2 > * {
+  flex: 1;
+  background-color: inherit;
+}
+
+section input {
+  width: 10ch;
+}
+
+.dimensions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.bound-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: .5rem;
+  margin: 1rem;
+  background-color: #c7d8c6;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.dimensions-input {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0px;
+  margin: .5rem;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: inherit;
+}
+
+.config-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0px;
+  margin: 0px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: inherit;
+}
+
+.dimensions-input > * {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  width: 20ch;
+  font-size: medium;
+  background-color: inherit;
+}
+
+.blok, .width, .height, .depth {
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.dimension-name {
+  width: 10ch;
+  background-color: inherit;
+}
+
+select, option, button, .dimension-number, .unit {
+  background-color: inherit;
+}
+
+.slider-selector {
+  display: flex;
+  width: min-content;
+  background-color: inherit;
+}
+
+.slider-selector > * {
+  background-color: inherit;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.config-row > * {
+  background-color: inherit;
+  font-size: medium;
+}
+
+.config-row > * > * {
+  background-color: inherit;
+  font-size: medium;
+}
+
+.slider {
+  width: 10ch;
+}
+
+.driedmodel {
+  display: flex;
+  flex-grow: 1;
+  background-color: inherit;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.driedmodel div {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  background-color: #c7d8c6;
+  padding: 0.5rem;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.driedmodel img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+section .blokken {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  width: 100%;
+}
+
+section .blok {
+  flex-grow: 1;
+  margin-bottom: 0px;
+}
+
+section .full {
+  height: 100%;
+}
+
+.aankoop {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c7d8c6;
+  width: 100%;
+}
+
+.aankoop > * {
+  background-color: #c7d8c6;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aankoop-box {
+  display: flex;
+  width: min(50ch, 100%);
+  background-color: #c7d8c6;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.aankoop-naam {
+  display: flex;
+  width: 15ch;
+  background-color: #c7d8c6;
+}
+
+.aankoop-veld {
+  display: flex;
+  background-color: #c7d8c6;
+  width: 100%;
+  border-style: inset;
+  border-width: 3px;
+  border-color: #777777;
+}
+
+.knop {
+  display: flex;
+  background-color: #c7d8c6;
+  width: min(20ch, 100%);
+  border-style: outset;
+  border-width: 3px;
+  border-color: #777777;
+}
+
+.betaling-knop {
+  display: flex;
+  background-color: #c7d8c6;
+  width: min(20ch, 100%);
+}
+
+output {
+  background-color: #c7d8c6;
+}
+
+/*#bouwen, #addplank, #removeplank, #plank-select, #plank-height-slider, #plank-height-value, #opentoggle, #reset, #buy, #mm {
+  color: black;
+}
+*/
+
+button:disabled, slider:disabled, select:disabled,  #plank-height-value{
+  color: grey;
+}
+
+#mm {
+  color: grey;
+}
+
+/* Media Queries */
+
+@media (orientation: portrait) {
+  main {
+    flex-direction: column;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 0em;
+    margin-top: 1em;
+  }
+  img {
+    width: 60%;
+  }
+
+  aside a, aside option, aside select {
+    font-size: max(1.5vw, 1.5vh);
+  }
+
+  aside{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+
+  aside div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: .5rem;
+      width: 100dvw;
+      height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+  img:not(.buy) {
+    display: none;
+  }
+
+  nav {
+    justify-content: start;
+    gap: 1rem;
+  }
 }
