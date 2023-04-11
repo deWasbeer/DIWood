@@ -57,7 +57,7 @@ nav {
   padding-right: 0.5em;
   margin-left: 1em;
   background-color: #c7d8c6;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 nav .nav-item {
@@ -102,7 +102,7 @@ aside div {
   width: max-content;
   height: 100%;
   background-color: #c7d8c6;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 aside a, aside option {
@@ -121,9 +121,12 @@ aside select {
 /* section content */
 
 section h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: max(3vw, 3vh);
   margin: 0;
-  margin-bottom: 1rem;
+  text-align: center;
 }
 
 section p {
@@ -147,15 +150,15 @@ section .titel2 {
   flex-direction: row;
   text-align:center;
   width: 80%;
-  margin-bottom: 0;
+  padding: .5rem;
+  margin: 1rem;
   background-color: #c7d8c6;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 section .titel2 > * {
   flex: 1;
   background-color: inherit;
-  margin-bottom: 0;
 }
 
 section input {
@@ -178,7 +181,7 @@ section input {
   padding: .5rem;
   margin: 1rem;
   background-color: #c7d8c6;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 .dimensions-input {
@@ -271,7 +274,7 @@ select, option, button, .dimension-number, .unit {
   height: 100%;
   background-color: #c7d8c6;
   padding: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 .driedmodel img {
@@ -355,6 +358,19 @@ form {
   display: flex;
   background-color: #c7d8c6;
   width: min(20ch, 100%);
+}
+
+/*#bouwen, #addplank, #removeplank, #plank-select, #plank-height-slider, #plank-height-value, #opentoggle, #reset, #buy, #mm {
+  color: black;
+}
+*/
+
+button:disabled, slider:disabled, select:disabled,  #plank-height-value{
+  color: grey;
+}
+
+#mm {
+  color: grey;
 }
 
 /* Media Queries */

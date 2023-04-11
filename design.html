@@ -76,31 +76,24 @@
               </div>
             </div>
             <div class="config-row">
-              <button type="button" onclick="build()">Bouw</button>
-              <button type="button" onclick="add()">Voeg verdieping toe</button>
-              <button type="button" onclick="remove()">Verwijder verdieping</button>
+              <button type="button" id="bouwen" onclick="readDimensions()">Bouw</button>
+              <button type="button" id="addplank" disabled onclick="addPlank()">Voeg verdieping toe</button>
+              <button type="button" id="removeplank" disabled onclick="removePlank()">Verwijder verdieping</button>
               <div class="slider-selector">
                 <!-- dropdown menu-->
-                <select id="plank-select">
+                <select disabled id="plank-select">
                   <option value="1">Plank 1</option>
-                  <option value="2">Plank 2</option>
-                  <option value="3">Plank 3</option>
-                  <option value="4">Plank 4</option>
-                  <option value="5">Plank 5</option>
-                  <option value="6">Plank 6</option>
-                  <option value="7">Plank 7</option>
-                  <option value="8">Plank 8</option>
-                  <option value="9">Plank 9</option>
-                  <option value="10">Plank 10</option>
                 </select>
                 <!-- slider that selects the height of the selected plank -->
-                <input type="range" min="0" max="100" value="0" class="slider" id="plank-height-slider" for="plank-height-value">
+                <input type="range" disabled min="0" max="100" value="50" class="slider" id="plank-height-slider" for="plank-height-value">
                 <!-- dispay of plank-height-value -->
-                <div class="dimension-number" id="plank-height-value">Value</div>
-                <div class="unit">mm</div>
+                <!-- div that shows the value of the slider with id plank-height-slider -->
+                <div class="dimension-number" disabled><output id="plank-height-value"></output></div>
+                <div class="unit" disabled id="mm">mm</div>
               </div>
-              <button type="button" onclick="move()">Deur stand</button>
-              <button type="button" onclick="buy()">Koop</button>
+              <button type="button" id="opentoggle" disabled onclick="">Deur stand</button>
+              <button type="button" id="reset" disabled onclick="reset()">Reset</button>
+              <button type="button" id="buy" disabled onclick="">Koop</button>
             </div>
           </div>
         </div>
@@ -122,6 +115,7 @@
         </div>
       </aside>
     </main>
+    <script src="scripts.js"></script>
   </body>
 
 </html>
